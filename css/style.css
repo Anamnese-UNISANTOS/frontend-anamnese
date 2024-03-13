@@ -1,0 +1,23 @@
+.div-principal {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.div-2 {
+    width: 600px;
+}
+
+.row-color {
+    cursor: pointer;
+}
+
+.search-bar {
+    display: flex;
+    gap: 10px;
+}
+
+table {
+    margin-top: 30px;
+}
