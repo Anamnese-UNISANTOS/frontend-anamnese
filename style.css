@@ -1,0 +1,43 @@
+header {
+    display: flex;
+    gap: 10px;
+    justify-content: end;
+    align-items: center;
+    padding: 10px 15px;
+    width: 100%;
+    height: 40px;
+    background-color: rgba(0, 40, 86, 1);
+}
+
+path {
+    fill: red;
+}
+
+.header-text {
+    color: white;
+    text-transform: uppercase;
+}
+
+.div-principal {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.div-2 {
+    width: 600px;
+}
+
+.row-color {
+    cursor: pointer;
+}
+
+.search-bar {
+    display: flex;
+    gap: 10px;
+}
+
+table {
+    margin-top: 30px;
+}
