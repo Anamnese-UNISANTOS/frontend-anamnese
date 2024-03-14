@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
@@ -12,68 +12,76 @@
 
 <body>
     <header>
-        <span class="header-text">Nome</span>
-        <span class="header-text">|</span>
+        <span>Nome</span>
+        <span>|</span>
+        <svg aria-hidden="true" focusable="false" viewBox="0 0 512 512" width="16" height="16">
+            <path fill="#0079BF"
+                d="M497 273L329 441c-15 15-41 4.5-41-17v-96H152c-13.3 0-24-10.7-24-24v-96c0-13.3 10.7-24 24-24h136V88c0-21.4 25.9-32 41-17l168 168c9.3 9.4 9.3 24.6 0 34zM192 436v-40c0-6.6-5.4-12-12-12H96c-17.7 0-32-14.3-32-32V160c0-17.7 14.3-32 32-32h84c6.6 0 12-5.4 12-12V76c0-6.6-5.4-12-12-12H96c-53 0-96 43-96 96v192c0 53 43 96 96 96h84c6.6 0 12-5.4 12-12z">
+            </path>
+        </svg>
     </header>
-    <svg id="exit-button" xmlns="http://www.w3.org/2000/svg"
-        width="40" height="40" fill="red">
-        <path
-            d="M377.9 105.9L500.7 228.7c7.2 7.2 11.3 17.1 11.3 27.3s-4.1 20.1-11.3 27.3L377.9 406.1c-6.4 6.4-15 9.9-24 9.9c-18.7 0-33.9-15.2-33.9-33.9l0-62.1-128 0c-17.7 0-32-14.3-32-32l0-64c0-17.7 14.3-32 32-32l128 0 0-62.1c0-18.7 15.2-33.9 33.9-33.9c9 0 17.6 3.6 24 9.9zM160 96L96 96c-17.7 0-32 14.3-32 32l0 256c0 17.7 14.3 32 32 32l64 0c17.7 0 32 14.3 32 32s-14.3 32-32 32l-64 0c-53 0-96-43-96-96L0 128C0 75 43 32 96 32l64 0c17.7 0 32 14.3 32 32s-14.3 32-32 32z" />
-    </svg>
+
     <div class="div-principal">
-        <div class="div-2">
+        <img src="./img/unisantos-logo.png" alt="Logo Unisantos" width="233px">
+        <div class="div-conteudo">
             <form class="search-bar form-inline">
                 <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                <button class="btn btn-outline-primary my-2 my-sm-0" type="submit">Search</button>
             </form>
-            <table class="table table-bordered table-hover">
-                <thead>
-                    <tr>
-                        <th scope="col">ID</th>
-                        <th scope="col">Nome</th>
-                        <th scope="col">Última Atualização</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr class="row-color" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                        <th scope="row">1</th>
-                        <td>João</td>
-                        <td>13/03/2024</td>
-                    </tr>
-                    <tr class="row-color">
-                        <th scope="row">2</th>
-                        <td>Maria</td>
-                        <td>14/03/2024</td>
-                    </tr>
-                    <tr class="row-color">
-                        <th scope="row">3</th>
-                        <td>Carlos</td>
-                        <td>15/03/2024</td>
-                    </tr>
-                    <tr class="row-color">
-                        <th scope="row">4</th>
-                        <td>Ana</td>
-                        <td>16/03/2024</td>
-                    </tr>
-                    <tr class="row-color">
-                        <th scope="row">5</th>
-                        <td>Pedro</td>
-                        <td>17/03/2024</td>
-                    </tr>
-                </tbody>
-            </table>
+            <div class="table-div">
+                <button type="button" class="btn btn-success" id="add-button">Adicionar paciente</button>
+                <table class="table table-bordered table-hover">
+                    <thead>
+                        <tr>
+                            <th scope="col">ID</th>
+                            <th scope="col">Nome</th>
+                            <th scope="col">Última Atualização</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="row-color" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                            <th scope="row">1</th>
+                            <td>João</td>
+                            <td>13/03/2024</td>
+                        </tr>
+                        <tr class="row-color">
+                            <th scope="row">2</th>
+                            <td>Maria</td>
+                            <td>14/03/2024</td>
+                        </tr>
+                        <tr class="row-color">
+                            <th scope="row">3</th>
+                            <td>Carlos</td>
+                            <td>15/03/2024</td>
+                        </tr>
+                        <tr class="row-color">
+                            <th scope="row">4</th>
+                            <td>Ana</td>
+                            <td>16/03/2024</td>
+                        </tr>
+                        <tr class="row-color">
+                            <th scope="row">5</th>
+                            <td>Pedro</td>
+                            <td>17/03/2024</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
 
             <!-- Modal -->
             <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
                 aria-hidden="true">
-                <div class="modal-dialog">
+                <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
                     <div class="modal-content">
                         <div class="modal-header">
                             <h1 class="modal-title fs-5" id="exampleModalLabel">Formulários de João</h1>
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div class="modal-body">
-                            <table class="table table-bordered table-hover">
+                            <span>Nome: João</span><br>
+                            <span>Idade: 20 anos</span><br>
+                            <span>Cidade: Santos</span>
+                            <table class="table modal-table table-bordered table-hover">
                                 <thead>
                                     <tr>
                                         <th scope="col">ID</th>
@@ -112,7 +120,7 @@
 
                         </div>
                         <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
                         </div>
                     </div>
                 </div>
