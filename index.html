@@ -22,44 +22,49 @@
     </header>
 
     <div class="div-principal">
+        <div class="div-gerenciar-usuarios">
+            <a href="gerenciar-usuarios.html" rel="next">
+                <button type="button" class="btn btn-primary" id="add-button">Gerenciar usuários</button>
+            </a>
+        </div>
         <img src="./img/unisantos-logo.png" alt="Logo Unisantos" width="233px">
         <div class="div-conteudo">
             <form class="search-bar form-inline">
                 <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
                 <button class="btn btn-outline-primary my-2 my-sm-0" type="submit">Search</button>
             </form>
-            <div class="table-div">
+            <div class="div-tabela">
                 <button type="button" class="btn btn-success" id="add-button">Adicionar formulário</button>
                 <table class="table table-bordered table-hover">
                     <thead>
                         <tr>
                             <th scope="col">Código</th>
-                            <th scope="col">Nome</th>
+                            <th scope="col">Paciente</th>
                             <th scope="col">Última Atualização</th>
                         </tr>
                     </thead>
                     <tbody>
-                        <tr class="row-color" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                        <tr class="clickable" data-bs-toggle="modal" data-bs-target="#exampleModal">
                             <th scope="row">1</th>
                             <td>João</td>
                             <td>13/03/2024</td>
                         </tr>
-                        <tr class="row-color">
+                        <tr class="clickable">
                             <th scope="row">2</th>
                             <td>Maria</td>
                             <td>14/03/2024</td>
                         </tr>
-                        <tr class="row-color">
+                        <tr class="clickable">
                             <th scope="row">3</th>
                             <td>Carlos</td>
                             <td>15/03/2024</td>
                         </tr>
-                        <tr class="row-color">
+                        <tr class="clickable">
                             <th scope="row">4</th>
                             <td>Ana</td>
                             <td>16/03/2024</td>
                         </tr>
-                        <tr class="row-color">
+                        <tr class="clickable">
                             <th scope="row">5</th>
                             <td>Pedro</td>
                             <td>17/03/2024</td>
@@ -84,33 +89,33 @@
                             <table class="table modal-table table-bordered table-hover">
                                 <thead>
                                     <tr>
-                                        <th scope="col">ID</th>
+                                        <th scope="col">Código</th>
                                         <th scope="col">Tipo de Formulário</th>
                                         <th scope="col">Última Atualização</th>
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <tr class="row-color">
+                                    <tr class="clickable">
                                         <th scope="row">1</th>
                                         <td>Anamnese Adulto</td>
                                         <td>13/03/2024</td>
                                     </tr>
-                                    <tr class="row-color">
+                                    <tr class="clickable">
                                         <th scope="row">2</th>
                                         <td>Formulario de Retorno</td>
                                         <td>14/03/2024</td>
                                     </tr>
-                                    <tr class="row-color">
+                                    <tr class="clickable">
                                         <th scope="row">3</th>
                                         <td>Formulario de Retorno</td>
                                         <td>15/03/2024</td>
                                     </tr>
-                                    <tr class="row-color">
+                                    <tr class="clickable">
                                         <th scope="row">4</th>
                                         <td>Formulario de Retorno</td>
                                         <td>16/03/2024</td>
                                     </tr>
-                                    <tr class="row-color">
+                                    <tr class="clickable">
                                         <th scope="row">5</th>
                                         <td>Formulario de Retorno</td>
                                         <td>17/03/2024</td>
