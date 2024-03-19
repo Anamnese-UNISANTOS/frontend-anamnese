@@ -6,7 +6,7 @@ body {
     background-color: #f2f4f7 !important;
 }
 
-header {
+.div-header {
     display: flex;
     gap: 10px;
     justify-content: end;
@@ -19,12 +19,16 @@ header {
     text-transform: uppercase;
 }
 
+.div-tabs {
+    margin-top: 10px;
+}
+
 .div-principal {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    height: 80vh;
 }
 
 .div-conteudo {
@@ -47,22 +51,12 @@ header {
     cursor: pointer;
 }
 
-.centered-row {
-    display: flex;
-    justify-content: center;
-}
-
-.div-gerenciar-usuarios {
-    width: 100%;
-    width: 70%;
-}
-
 .div-modal-footer {
     width: 100%;
     display: flex;
     justify-content: space-between;
 }
 
-#add-button {
+.add-button {
     margin-bottom: 10px;
 }

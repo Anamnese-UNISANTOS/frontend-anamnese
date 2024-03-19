@@ -12,13 +12,25 @@
 
 <body>
     <header>
-        <span>Nome</span>
-        <span>|</span>
-        <svg aria-hidden="true" focusable="false" viewBox="0 0 512 512" width="16" height="16">
-            <path fill="#0079BF"
-                d="M497 273L329 441c-15 15-41 4.5-41-17v-96H152c-13.3 0-24-10.7-24-24v-96c0-13.3 10.7-24 24-24h136V88c0-21.4 25.9-32 41-17l168 168c9.3 9.4 9.3 24.6 0 34zM192 436v-40c0-6.6-5.4-12-12-12H96c-17.7 0-32-14.3-32-32V160c0-17.7 14.3-32 32-32h84c6.6 0 12-5.4 12-12V76c0-6.6-5.4-12-12-12H96c-53 0-96 43-96 96v192c0 53 43 96 96 96h84c6.6 0 12-5.4 12-12z">
-            </path>
-        </svg>
+        <div class="div-header">
+            <span>Nome</span>
+            <span>|</span>
+            <svg aria-hidden="true" focusable="false" viewBox="0 0 512 512" width="16" height="16">
+                <path fill="#0079BF"
+                    d="M497 273L329 441c-15 15-41 4.5-41-17v-96H152c-13.3 0-24-10.7-24-24v-96c0-13.3 10.7-24 24-24h136V88c0-21.4 25.9-32 41-17l168 168c9.3 9.4 9.3 24.6 0 34zM192 436v-40c0-6.6-5.4-12-12-12H96c-17.7 0-32-14.3-32-32V160c0-17.7 14.3-32 32-32h84c6.6 0 12-5.4 12-12V76c0-6.6-5.4-12-12-12H96c-53 0-96 43-96 96v192c0 53 43 96 96 96h84c6.6 0 12-5.4 12-12z">
+                </path>
+            </svg>
+        </div>
+        <div class="div-tabs">
+            <ul class="nav nav-tabs">
+                <li class="nav-item">
+                    <a class="nav-link" aria-current="page" href="index.html">Pacientes</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="gerenciar-usuarios.html">Gerenciar Usuários</a>
+                </li>
+            </ul>
+        </div>
     </header>
 
     <div class="div-principal">
@@ -29,7 +41,8 @@
                 <button class="btn btn-outline-primary my-2 my-sm-0" type="submit">Search</button>
             </form>
             <div class="table-div">
-                <button type="button" class="btn btn-success" id="add-button">Adicionar usuário</button>
+                <button type="button" class="btn add-button btn-success" data-bs-toggle="modal"
+                    data-bs-target="#criarUsuarioModal">Adicionar Usuário</button>
                 <table class="table caption-top table-bordered table-hover">
                     <caption>Lista de Usuários</caption>
                     <thead>
@@ -42,48 +55,91 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <th class="clickable" scope="row" data-bs-toggle="modal" data-bs-target="#exampleModal">1
-                            </th>
-                            <td class="clickable" data-bs-toggle="modal" data-bs-target="#exampleModal">João</td>
+                        <tr data-bs-toggle="modal" data-bs-target="#usuarioModal">
+                            <th class="clickable" scope="row">1</th>
+                            <td class="clickable">João</td>
                             <td class="clickable">8556874</td>
                             <td class="clickable">Sim</td>
-                            <td class="clickable" data-bs-toggle="modal" data-bs-target="#exampleModal">13/03/2024</td>
+                            <td class="clickable">13/03/2024</td>
+                        </tr>
                         <tr>
                             <th class="clickable" scope="row">2</th>
                             <td class="clickable">Maria</td>
                             <td class="clickable">7558652</td>
                             <td class="clickable">Sim</td>
                             <td class="clickable">14/03/2024</td>
+                        </tr>
                         <tr>
                             <th class="clickable" scope="row">3</th>
                             <td class="clickable">Carlos</td>
                             <td class="clickable">6558742</td>
                             <td class="clickable">Sim</td>
                             <td class="clickable">15/03/2024</td>
+                        </tr>
                         <tr>
                             <th class="clickable" scope="row">4</th>
                             <td class="clickable">Ana</td>
                             <td class="clickable">665218</td>
                             <td class="clickable">Sim</td>
                             <td class="clickable">16/03/2024</td>
+                        </tr>
                         <tr>
                             <th class="clickable" scope="row">5</th>
                             <td class="clickable">Pedro</td>
                             <td class="clickable">4774451</td>
                             <td class="clickable">Sim</td>
                             <td class="clickable">17/03/2024</td>
+                        </tr>
                     </tbody>
                 </table>
             </div>
 
-            <!-- Modal -->
-            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+            <!-- Modal Criar Usuario -->
+            <div class="modal fade" id="criarUsuarioModal" tabindex="-1" aria-labelledby="criarUsuarioModalLabel"
                 aria-hidden="true">
                 <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <h1 class="modal-title fs-5" id="exampleModalLabel">Dados de João</h1>
+                            <h1 class="modal-title fs-5" id="criarUsuarioModalLabel">Criar Usuário</h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <form>
+                                <div class="mb-3">
+                                    <label for="name" class="form-label">Nome</label>
+                                    <input type="text" class="form-control" id="name">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="matricula" class="form-label">Matrícula</label>
+                                    <input type="text" class="form-control" id="matricula">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="senha" class="form-label">Senha</label>
+                                    <input type="password" class="form-control" id="pass">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="senha" class="form-label">Confirmar Senha</label>
+                                    <input type="password" class="form-control" id="cpass">
+                                </div>
+                        </div>
+                        <div class="modal-footer">
+                            <div class="div-modal-footer">
+                                <button class="btn btn-danger">Cancelar</button>
+                                <button type="submit" class="btn btn-primary">Criar</button>
+                            </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Modal Usuario -->
+            <div class="modal fade" id="usuarioModal" tabindex="-1" aria-labelledby="usuarioModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h1 class="modal-title fs-5" id="usuarioModalLabel">Dados de João</h1>
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div class="modal-body">
@@ -108,10 +164,9 @@
                         <div class="modal-footer">
                             <div class="div-modal-footer">
                                 <button class="btn btn-danger">Deletar</button>
+                                <button class="btn btn-secondary">Inativar</button>
                                 <button type="submit" class="btn btn-primary">Atualizar</button>
                             </div>
-                        </form>
-                        <form action="">
                             </form>
                         </div>
                     </div>
