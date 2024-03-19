@@ -1,0 +1,21 @@
+todo pce
+
+geral:
+
+- filtro de tabelas
+
+gerenciar usuarios:
+
+- pagina de usuario, com opcao de editar e lista de formularios criados por ele
+
+formularios:
+
+- adicionar usuario
+- adicionar paciente
+- adicionar formulario
+
+- anamnese
+	- parte 1
+	- parte 2
+	- parte 3
+	- parte 4

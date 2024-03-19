@@ -6,12 +6,17 @@ body {
     background-color: #f2f4f7 !important;
 }
 
+header {
+    margin-bottom: 30px;
+}
+
 .div-header {
     display: flex;
     gap: 10px;
     justify-content: end;
     align-items: center;
     padding: 2px 15px;
+    margin-bottom: 10px;
     width: 100%;
     height: 30px;
     background-color: rgba(0, 40, 86, 1);
@@ -19,20 +24,15 @@ body {
     text-transform: uppercase;
 }
 
-.div-tabs {
-    margin-top: 10px;
-}
-
 .div-principal {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 80vh;
 }
 
 .div-conteudo {
-    margin-top: 50px;
+    margin-top: 30px;
     width: 70%;
 }
 
