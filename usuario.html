@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gerenciar Usuários</title>
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/usuario.css">
     <link rel="stylesheet" href="./css/bootstrap.css">
     <script src="./js/bootstrap.js" defer></script>
 </head>
@@ -39,7 +40,53 @@
     <div class="div-principal">
         <img src="./img/unisantos-logo.png" alt="Logo Unisantos" width="233px">
         <div class="div-conteudo">
+            <div class="div-status-acoes">
+                <button type="button" class="botao-ativo">Ativo</button>
+                <div class="div-acoes">
+                    <button class="btn btn-secondary">Inativar</button>
+                    <button class="btn btn-danger">Deletar</button>
+                </div>
+            </div>
+            <form>
+                <div class="mb-3">
+                    <label for="name" class="form-label">Nome</label>
+                    <input type="text" class="form-control" id="name" value="João">
+                </div>
+                <div class="mb-3">
+                    <label for="matricula" class="form-label">Matrícula</label>
+                    <input type="text" class="form-control" id="matricula" value="8556874">
+                </div>
+                <button type="submit" class="btn btn-primary">Atualizar Dados</button>
+            </form>
+            <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#usuarioModal">Alterar Senha</button>
+        </div>
+    </div>
 
+    <div class="modal fade" id="usuarioModal" tabindex="-1" aria-labelledby="usuarioModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="usuarioModalLabel">Dados de João</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="mb-3">
+                            <label for="password" class="form-label">Nova Senha</label>
+                            <input type="password" class="form-control" id="newpass">
+                        </div>
+                        <div class="mb-3">
+                            <label for="password" class="form-label">Confirmar Nova Senha</label>
+                            <input type="password" class="form-control" id="cnewpass">
+                        </div>
+                </div>
+                <div class="modal-footer">
+                    <div class="div-modal-footer">
+                        <button type="submit" class="btn btn-primary">Atualizar</button>
+                    </div>
+                    </form>
+                </div>
+            </div>
         </div>
     </div>
 </body>
