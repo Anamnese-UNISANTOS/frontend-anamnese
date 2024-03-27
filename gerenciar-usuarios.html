@@ -7,6 +7,7 @@
     <title>Gerenciar Usuários</title>
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/bootstrap.css">
+    <script src="./js/script.js" defer></script>
     <script src="./js/bootstrap.js" defer></script>
 </head>
 
@@ -30,7 +31,7 @@
                     <a class="nav-link" aria-current="page" href="formularios.html">Formulários</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link active" href="gerenciar-usuarios.html">Gerenciar Usuários</a>
+                    <a class="nav-link active" aria-current="page" href="gerenciar-usuarios.html">Gerenciar Usuários</a>
                 </li>
             </ul>
         </div>
@@ -57,41 +58,41 @@
                             <th scope="col">Criado Em</th>
                         </tr>
                     </thead>
-                    <tbody>
-                        <tr data-bs-toggle="modal" data-bs-target="#usuarioModal">
-                            <th class="clickable" scope="row">1</th>
-                            <td class="clickable">João</td>
-                            <td class="clickable">8556874</td>
-                            <td class="clickable">Sim</td>
-                            <td class="clickable">13/03/2024</td>
+                    <tbody class="clickable">
+                        <tr id="row-user-id-1">
+                            <th scope="row">1</th>
+                            <td>João</td>
+                            <td>8556874</td>
+                            <td>Sim</td>
+                            <td>13/03/2024</td> </a>
                         </tr>
                         <tr>
-                            <th class="clickable" scope="row">2</th>
-                            <td class="clickable">Maria</td>
-                            <td class="clickable">7558652</td>
-                            <td class="clickable">Sim</td>
-                            <td class="clickable">14/03/2024</td>
+                            <th scope="row">2</th>
+                            <td>Maria</td>
+                            <td>7558652</td>
+                            <td>Sim</td>
+                            <td>14/03/2024</td>
                         </tr>
                         <tr>
-                            <th class="clickable" scope="row">3</th>
-                            <td class="clickable">Carlos</td>
-                            <td class="clickable">6558742</td>
-                            <td class="clickable">Sim</td>
-                            <td class="clickable">15/03/2024</td>
+                            <th scope="row">3</th>
+                            <td>Carlos</td>
+                            <td>6558742</td>
+                            <td>Sim</td>
+                            <td>15/03/2024</td>
                         </tr>
                         <tr>
-                            <th class="clickable" scope="row">4</th>
-                            <td class="clickable">Ana</td>
-                            <td class="clickable">665218</td>
-                            <td class="clickable">Sim</td>
-                            <td class="clickable">16/03/2024</td>
+                            <th scope="row">4</th>
+                            <td>Ana</td>
+                            <td>665218</td>
+                            <td>Sim</td>
+                            <td>16/03/2024</td>
                         </tr>
                         <tr>
-                            <th class="clickable" scope="row">5</th>
-                            <td class="clickable">Pedro</td>
-                            <td class="clickable">4774451</td>
-                            <td class="clickable">Sim</td>
-                            <td class="clickable">17/03/2024</td>
+                            <th scope="row">5</th>
+                            <td>Pedro</td>
+                            <td>4774451</td>
+                            <td>Sim</td>
+                            <td>17/03/2024</td>
                         </tr>
                     </tbody>
                 </table>
@@ -129,46 +130,6 @@
                             <div class="div-modal-footer">
                                 <button class="btn btn-danger">Cancelar</button>
                                 <button type="submit" class="btn btn-primary">Criar</button>
-                            </div>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Modal Usuario -->
-            <div class="modal fade" id="usuarioModal" tabindex="-1" aria-labelledby="usuarioModalLabel"
-                aria-hidden="true">
-                <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h1 class="modal-title fs-5" id="usuarioModalLabel">Dados de João</h1>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                        </div>
-                        <div class="modal-body">
-                            <form>
-                                <div class="mb-3">
-                                    <label for="name" class="form-label">Nome</label>
-                                    <input type="text" class="form-control" id="name" value="João">
-                                </div>
-                                <div class="mb-3">
-                                    <label for="matricula" class="form-label">Matrícula</label>
-                                    <input type="text" class="form-control" id="matricula" value="8556874">
-                                </div>
-                                <div class="mb-3">
-                                    <label for="senha" class="form-label">Nova Senha</label>
-                                    <input type="password" class="form-control" id="newpass">
-                                </div>
-                                <div class="mb-3">
-                                    <label for="senha" class="form-label">Confirmar Nova Senha</label>
-                                    <input type="password" class="form-control" id="cnewpass">
-                                </div>
-                        </div>
-                        <div class="modal-footer">
-                            <div class="div-modal-footer">
-                                <button class="btn btn-danger">Deletar</button>
-                                <button class="btn btn-secondary">Inativar</button>
-                                <button type="submit" class="btn btn-primary">Atualizar</button>
                             </div>
                             </form>
                         </div>

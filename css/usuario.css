@@ -1,3 +1,10 @@
+.div-conteudo {
+    max-width: 800px;
+    background-color: white;
+    padding: 40px;
+    border-radius: 10px;
+}
+
 .botao-ativo {
     pointer-events: none;
     border-radius: 100px;
@@ -10,4 +17,5 @@
 .div-status-acoes {
     display: flex;
     justify-content: space-between;
+    margin-bottom: 10px;
 }

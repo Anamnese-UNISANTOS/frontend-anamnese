@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gerenciar Usuários</title>
-    <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/usuario.css">
+    <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/bootstrap.css">
     <script src="./js/bootstrap.js" defer></script>
 </head>
@@ -31,7 +31,7 @@
                     <a class="nav-link" aria-current="page" href="formularios.html">Formulários</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link active" href="gerenciar-usuarios.html">Gerenciar Usuários</a>
+                    <a class="nav-link active" aria-current="page" href="gerenciar-usuarios.html">Gerenciar Usuários</a>
                 </li>
             </ul>
         </div>
@@ -57,8 +57,8 @@
                     <input type="text" class="form-control" id="matricula" value="8556874">
                 </div>
                 <button type="submit" class="btn btn-primary">Atualizar Dados</button>
+                <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#usuarioModal">Alterar Senha</button>
             </form>
-            <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#usuarioModal">Alterar Senha</button>
         </div>
     </div>
 
